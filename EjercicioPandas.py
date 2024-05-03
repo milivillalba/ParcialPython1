@@ -55,11 +55,11 @@ tercer_cuatrimestre= [
     {"mes": "Septiembre", "total_ventas": 28000, "año": 2023},
  ]
 
+trimestre=  df.groupby(primer_cuatrimestre).sum()
+print(trimestre)
 
-agrupar_datos = df.groupby('mes').sum()
-print(agrupar_datos)
 #Filtrar y mostrar solos los meses donde las ventas superen los 2000
-
+ # perdon profe no supe como filtrar los meses pero con los valores de total d eventas , por eso solo filtre el total de ventas
 ventas_mayor= df[df['total_ventas']>2000]
 print(ventas_mayor)
 
@@ -74,7 +74,7 @@ DataFrame= pd.DataFrame({
     'Total_ventas': [100000,200000,250000,300000,450000,500000,550000,600000,650000,700000,750000,800000]
 })
 
-
+#Graficar 
 plt.plot(DataFrame['Meses'], DataFrame['Total_ventas'])
 plt.title("Tendecia de ventas a lo largo de los meses")
 plt.xlabel("Meses")
